@@ -1,0 +1,8 @@
+<div>
+<ul *ngFor ="let vendor of vendors let i = index">
+  <li> {{vendor._id}}: {{vendor.firstName}} {{vendor.lastName}} {{vendor.gym}} {{vendor.store}} {{vendor.park}} (index {{i}}
+     <button mat-button color="warn"(click)="onDelete(vendor._id)">DELETE</button>
+    <button mat-button color ="accent"[routerLink]="['/editVendor',vendor._id]">UPDATE</button>
+    </li>
+</ul>
+</div>
